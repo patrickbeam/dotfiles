@@ -1,0 +1,12 @@
+[line_break]
+disabled = true
+
+[aws]
+disabled = true
+
+[gcloud]
+disabled = true
+
+[python]
+# Only use the `python3` binary to get the version.
+python_binary = "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3.10"

@@ -94,7 +94,6 @@ source <(kubectl completion zsh)
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
 alias vim=nvim
 alias vi=nvim
 alias v=nvim
@@ -121,11 +120,6 @@ alias gcl='git clone'
 alias gta='git tag -a -m'
 alias gf='git reflog'
 
-# leverage an alias from the ~/.gitconfig
-#alias gh='git hist'
-
-
-# test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -147,8 +141,6 @@ eval "$(starship init zsh)"
 
 export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/patrickbeam/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/patrickbeam/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/patrickbeam/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/patrickbeam/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+alias config='/opt/homebrew/bin/git --git-dir=/Users/patrickbeam/.cfg/ --work-tree=/Users/patrickbeam
