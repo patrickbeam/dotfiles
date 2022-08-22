@@ -112,7 +112,7 @@ alias gd='git diff'
 alias gm='git commit -m'
 alias gma='git commit -am'
 alias gb='git branch'
-alias gc='git checkout'
+alias gc='git switch'
 alias gra='git remote add'
 alias grr='git remote rm'
 alias gpu='git pull'
@@ -128,7 +128,7 @@ autoload bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/vault vault
 complete -C aws_completer aws
 
-# Functions
+# Functions Jay G magic!
 function kssh() {
    ip=$(echo $1 | sed -nE "s|([a-z-])*([0-9]{1,3})[.-]([0-9]{1,3})[.-]([0-9]{1,3})[.-]([0-9]{1,3})(.*)|\2.\3.\4.\5|p")
    echo parsed target ip as $ip
@@ -143,4 +143,4 @@ export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/patrickbeam/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/patrickbeam/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
-alias config='/opt/homebrew/bin/git --git-dir=/Users/patrickbeam/.cfg/ --work-tree=/Users/patrickbeam
+alias config='/opt/homebrew/bin/git --git-dir=/Users/patrickbeam/.cfg/ --work-tree=/Users/patrickbeam'
