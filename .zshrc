@@ -100,6 +100,9 @@ alias v=nvim
 alias k='/opt/homebrew/bin/kubectl'
 alias python=python3
 alias pip=pip3
+alias ls='lsd'
+alias ll='ls -l'
+alias lt='ls --tree'
 
 # -------------------------------------------------------------------
 # Git

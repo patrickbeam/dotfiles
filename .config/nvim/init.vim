@@ -23,7 +23,7 @@ call plug#begin(expand('~/.config/nvim/plugged'))
 "*****************************************************************************
 "" Plug install packages
 "*****************************************************************************
-"Plug 'github/copilot.vim'
+Plug 'github/copilot.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'sheerun/vim-polyglot'
