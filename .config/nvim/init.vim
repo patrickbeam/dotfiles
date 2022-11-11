@@ -28,9 +28,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'sheerun/vim-polyglot'
 Plug 'nvim-lua/plenary.nvim'
-"`Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
-"`Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
-"`Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}
 Plug 'tweekmonster/gofmt.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
@@ -166,7 +163,7 @@ let no_buffers_menu=1
 let g:vim_monokai_tasty_italic = 1
 colorscheme gruvbox
 set background=dark
-let g:gruvbox_contrast_dark = 'hard'
+let g:nord = 'hard'
 "*****************************************************************************
 "" Abbreviations
 "*****************************************************************************
