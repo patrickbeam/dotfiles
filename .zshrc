@@ -6,6 +6,8 @@ export ZSH=~/.oh-my-zsh
 export GOPATH=$HOME/go
 export GOBIN=$HOME/go/bin
 export PATH=$PATH:$HOME/go/bin
+export FZF_DEFAULT_COMMAND='fd'
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 #export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 #AWS Config 
