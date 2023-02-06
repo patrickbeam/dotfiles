@@ -19,13 +19,7 @@ return require('packer').startup(function(use)
           vim.cmd('colorscheme rose-pine')
       end
   })
-  use({
-      'projekt0n/github-nvim-theme',
-      as = 'github_dimmed',
-      config = function()
-          vim.cmd('colorscheme github_dimmed')
-      end
-  })
+
   use {
       "windwp/nvim-autopairs",
       config = function() require("nvim-autopairs").setup {} end
@@ -34,10 +28,10 @@ return require('packer').startup(function(use)
   use({'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'})
   use('nvim-treesitter/playground')
   use('ThePrimeagen/harpoon')
+  use('github/copilot.vim')
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
   use('nvim-tree/nvim-web-devicons')
-  use('github/copilot.vim')
   use('itchyny/lightline.vim')
   use {
       'VonHeikemen/lsp-zero.nvim',
