@@ -34,13 +34,16 @@ plugins=(
   golang
   kops
   terraform
-  tmux
   vi-mode
 )
 source $ZSH/oh-my-zsh.sh
 source <(kubectl completion zsh)
 
 # User configuration
+
+#tailscale alias
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
+
 
 alias vim=nvim
 alias vi=nvim

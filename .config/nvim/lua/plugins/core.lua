@@ -31,6 +31,12 @@ return {
     config = true,
   },
 
+  --- Add vim tmux navigator
+  {
+    "christoomey/vim-tmux-navigator",
+    lazy = false,
+  },
+
   -- change some telescope options and a keymap to browse plugin files
   {
     "nvim-telescope/telescope.nvim",
