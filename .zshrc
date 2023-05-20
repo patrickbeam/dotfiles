@@ -97,4 +97,4 @@ export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/patrickbeam/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/patrickbeam/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
-alias config='/opt/homebrew/bin/git --git-dir=/Users/patrickbeam/.cfg/ --work-tree=/Users/patrickbeam'
+alias config='/opt/homebrew/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
