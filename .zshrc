@@ -92,6 +92,8 @@ function kssh() {
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
 export PATH="/usr/local/opt/node@12/bin:$PATH"
 eval "$(starship init zsh)"
+# 1password cli completion
+eval "$(op completion zsh)"; compdef _op op
 
 export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
 
