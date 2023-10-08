@@ -2,6 +2,7 @@ return {
   -- add gruvbox
   { "ellisonleao/gruvbox.nvim" },
   { "catppuccin/nvim", name = "catppuccin" },
+  { "projekt0n/caret.nvim" },
 
   -- Configure LazyVim to load gruvbox
   {
@@ -135,6 +136,7 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
+      ignore_install = { "help" },
       ensure_installed = {
         "bash",
         "help",
