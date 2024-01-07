@@ -3,9 +3,6 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
-export GOPATH=$HOME/go
-export GOBIN=$HOME/go/bin
-export PATH=$PATH:$HOME/go/bin
 export FZF_DEFAULT_COMMAND='fd'
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 #export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
@@ -99,4 +96,7 @@ export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/patrickbeam/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/patrickbeam/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
-alias config='/opt/homebrew/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+git_path=$(which git)
+export GIT_COMMAND="$git_path"
+alias config='$GIT_COMMAND --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+export PATH="/opt/homebrew/opt/curl/bin:$PATH"
