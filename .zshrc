@@ -32,6 +32,7 @@ plugins=(
   kops
   terraform
   vi-mode
+  nix-zsh-completions
 )
 source $ZSH/oh-my-zsh.sh
 source <(kubectl completion zsh)
@@ -100,3 +101,10 @@ git_path=$(which git)
 export GIT_COMMAND="$git_path"
 alias config='$GIT_COMMAND --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
+
+# Nix
+if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+  . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+fi
+# End Nix
+. "$HOME/.cargo/env"
