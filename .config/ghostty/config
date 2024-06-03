@@ -1,0 +1,12 @@
+# The syntax is "key = value". The whitespace around the equals doesn't matter.
+background = 282c34
+foreground= ffffff
+font-size= 18
+font-family = Cascadia Code NF
+theme = tokyonight
+#theme = catppuccin-mocha
+
+
+#keybind = ctrl+z=close_surface
+keybind = ctrl+d=new_split:right
+
