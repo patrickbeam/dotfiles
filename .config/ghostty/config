@@ -9,4 +9,3 @@ theme = tokyonight
 
 #keybind = ctrl+z=close_surface
 keybind = ctrl+d=new_split:right
-
