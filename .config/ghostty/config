@@ -2,7 +2,7 @@
 background = 282c34
 foreground= ffffff
 font-size= 18
-font-family = Cascadia Code NF
+font-family = MonaspiceKr Nerd Font Mono
 theme = tokyonight
 #theme = catppuccin-mocha
 
