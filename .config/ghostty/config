@@ -4,6 +4,9 @@ foreground= ffffff
 font-size= 18
 font-family = MonaspiceKr Nerd Font Mono
 theme = tokyonight
+cursor-style = block
+cursor-style-blink = false
+macos-icon = microchip
 #theme = catppuccin-mocha
 
 
