@@ -49,9 +49,9 @@ alias v=nvim
 alias k='/opt/homebrew/bin/kubectl'
 alias python=python3
 alias pip=pip3
-alias ls='lsd'
-alias ll='ls -l'
-alias lt='ls --tree'
+alias ls='eza --icons --git --group-directories-first'
+alias ll='eza --long --git --icons --group-directories-first --header'
+alias lt='eza --tree --level=2 --icons --git'
 
 # -------------------------------------------------------------------
 # Git
@@ -87,6 +87,7 @@ function kssh() {
    ssh -i ~/.ssh/kubernetes.pem admin@$ip
 }
 
+export BROWSER_PATH="/Applications/Brave Browser.app/Contents/MacOS/Brave Browser"
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
 export PATH="/usr/local/opt/node@12/bin:$PATH"
 eval "$(starship init zsh)"
@@ -94,9 +95,6 @@ eval "$(starship init zsh)"
 eval "$(op completion zsh)"; compdef _op op
 
 export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/patrickbeam/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/patrickbeam/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 git_path=$(which git)
 export GIT_COMMAND="$git_path"
 alias config='$GIT_COMMAND --git-dir=$HOME/.cfg/ --work-tree=$HOME'
@@ -108,4 +106,4 @@ if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
 fi
 # End Nix
 . "$HOME/.cargo/env"
-
+export PATH="$HOME/.local/bin:$PATH"

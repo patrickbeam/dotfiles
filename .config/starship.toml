@@ -1,14 +1,17 @@
-[line_break]
-disabled = true
+add_newline = true
+command_timeout = 200
+format = "[$directory$git_branch]($style)$character"
 
-[aws]
-disabled = true
+[character]
+error_symbol = "[✗](bold red)"
+success_symbol = "[❯](bold #A5D6A7)[❯](bold #FFF59D)[❯](bold #FFAB91)"
 
-[gcloud]
-disabled = true
+[directory]
+truncation_length = 2
+truncation_symbol = "…/"
+repo_root_style = "bold cyan"
+repo_root_format = "[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style) "
 
-[python]
-# Only use the `python3` binary to get the version.
-python_binary = "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3.10"
-
-
+[git_branch]
+format = "[$branch]($style) "
+style = "bold"
