@@ -1,34 +1,21 @@
 return {
   {
     "neovim/nvim-lspconfig",
-    dependencies = {
-      'saghen/blink.cmp',
-      {
-	"folke/lazydev.nvim",
-	ft = "lua", -- only load on lua files
-	opts = {
-	  library = {
-	    { path = "${3rd}/luv/library", words = { "vim%.uv" } },
-	  },
-	},
-      },
-    },
+    dependencies = { "saghen/blink.cmp" },
+    event = "VeryLazy",
     config = function()
-      local capabilities = require('blink.cmp').get_lsp_capabilities()
-      require("lspconfig").lua_ls.setup{ capabilities = capabilities }
-      require("lspconfig").bashls.setup{}
-      require("lspconfig").pyright.setup{
-	capabilities = capabilities,
-	settings = {
-	  python = {
-	    analysis = {
-	      autoSearchPaths = true,
-	      useLibraryCodeForTypes = true,
-	      diagnosticMode = "workspace",
-	    },
-	  },
-	},
-      }
+      require("lspconfig") -- Ensure lspconfig is loaded (provides server configs)
+      local util = require("config.util")
+      local servers = { "lua_ls", "bashls", "pyright" }
+      for _, server_name in ipairs(servers) do
+        -- Use the new Neovim 0.11 API: vim.lsp.config() to customize config
+        vim.lsp.config(server_name, {
+          on_attach = util.on_attach,
+          capabilities = util.capabilities,
+        })
+        -- Enable the server so it activates for its filetypes
+        vim.lsp.enable(server_name)
+      end
     end,
-  }
+  },
 }

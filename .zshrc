@@ -143,3 +143,10 @@ export VISUAL="$EDITOR"
 # =============================================================================
 # Cargo (Rust)
 . "$HOME/.cargo/env"
+
+# bun completions
+[ -s "/Users/patrickbeam/.bun/_bun" ] && source "/Users/patrickbeam/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
